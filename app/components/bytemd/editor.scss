@@ -1,0 +1,12 @@
+@import 'bytemd/dist/index.css';
+@import 'juejin-markdown-themes/dist/juejin.css';
+// @import 'highlight.js/styles/default.css';
+@import 'highlight.js/styles/atom-one-dark.css'; // 代码高亮主题 掘金编辑器已经依赖这个 highlight.js 这里无需单独安装
+// @import 'highlight.js/styles/a11y-dark.css';
+
+.bytemd {
+  // 设置默认高度，防止内容过少时，高度不够显示
+  height: 100vh;
+  border: 0;
+  overflow: hidden;
+}
