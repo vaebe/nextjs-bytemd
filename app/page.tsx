@@ -1,13 +1,14 @@
 'use client'
+import Link from 'next/link'
 
-import { useState } from 'react';
-import { BytemdEditor } from './components/bytemd/editor'
 
 export default function Home() {
 
-  const [content, setContent] = useState('')
   
   return (
-    <BytemdEditor content={content} setContent={setContent}></BytemdEditor>
+    <div className='space-x-4 space-y-4 p-10'>
+      <Link className='p-4 rounded border' href="/md/add">BytemdEditor</Link>
+      <Link className='p-4 rounded border' href="/md/view">BytemdView</Link>
+    </div>
   );
 }

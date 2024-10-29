@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { BytemdViewer } from '../components/bytemd/viewer'
-import {ThemeSwitch} from '../components/theme-switch'
+import { BytemdViewer } from '../../components/bytemd/viewer'
+import {ThemeSwitch} from '../../components/theme-switch'
 
 export default function Home() {
   const [content, setContent] = useState('')
