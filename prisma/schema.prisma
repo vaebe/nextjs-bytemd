@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Article {
+  id         String    @id @unique
+  userId     Int
+  title      String    @db.Text
+  content    String    @db.LongText
+  classify   String?   @db.Text
+  coverImg   String?    @db.Text
+  summary    String    @db.Text
+  source     String?    @db.Text // 00 博客创建 01 掘金同步
+  views      Int       @default(1)
+  likes      Int       @default(1)
+  favorites  Int       @default(1)
+  showNumber Int       @default(1)
+  status     String    @db.Text
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime? @updatedAt
+  deletedAt  DateTime?
+  isDeleted  Int?      @default(0)
+  @@map("article") // 指定表名
+}
